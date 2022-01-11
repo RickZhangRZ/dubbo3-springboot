@@ -1,0 +1,19 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: dubbo-provider
+
+dubbo:
+  application:
+    name: dubbo-provider
+  registry:
+    address: zookeeper://192.168.200.174:4180?backup=192.168.200.174:4181,192.168.200.174:4182
+    timeout: 2000
+  protocol:
+    name: dubbo
+    port: 20890
+  # 扫描 @DubboService 注解
+  scan:
+    base-packages: com.xiaozhang.dubboprovider.Impl

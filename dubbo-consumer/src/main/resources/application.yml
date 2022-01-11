@@ -1,0 +1,13 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: dubbo-consumer
+
+dubbo:
+  registry:
+    address: zookeeper://192.168.200.174:4180?backup=192.168.200.174:4181,192.168.200.174:4182
+    timeout: 2000
+  protocol:
+    name: dubbo
